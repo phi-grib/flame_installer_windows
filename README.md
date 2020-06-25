@@ -58,7 +58,7 @@ to the folder "setup_self_contained"
 define MySetupDir "your_path_to/windows_installer/setup_self_contained/"
 
 4 - Compile the program by clicking on compile icon in innosetup. If something is missing (flame, flame_api, flame_env) or 
-the path are set properly compilation will be aborted and the reason will pop up.
+the paths are not set properly compilation will be aborted and the reason will pop up.
 
 
 ## Downloading the installer
