@@ -3,14 +3,12 @@
 ## Overview
 This repository contains scripts for generating a Windows installer for Flame, using the software InnoSetup (https://jrsoftware.org/isinfo.php). 
 
-Two different installers are provided. flame_setup_script_miniconda and flame_setup_script_self_contained. First one uses miniconda3 and internet connection
+Two different compilation scripts are provided. flame_setup_script_miniconda and flame_setup_script_self_contained. First one uses miniconda3 and internet connection
 is needed. Second one, which does not requiere internet connection, is self-contained and needs of a packed conda environment containing all the libraries needed to run flame. This is explained below.
 
-This installer copies a version of Flame and Flame_API to a local Windows folder, installs miniconda3 (the executable is provided) and executes an script to create the flame environment, downloading from Internet all the packages required. Finally, the flame software is installed in the environment and flame is configured.
+This installer copies a version of Flame and Flame_API to a local Windows folder.
 
-Once Flame has been installed, new runs of the installer can be used to update existing version of the environment or the code.
 
-So far, the installer only supports 64 bits versions of Windows (due to the miniconda version provided) and requires Internet access. Future versions will contain a compressed version of the environment, thus not requiring Internet access for the install.
 
 
 ## Common libraries
@@ -19,11 +17,18 @@ In order to create a flame installer, both flame and flame_api repositories have
 git clone https://github.com/phi-grib/flame.git
 git clone https://github.com/phi-grib/flame_API.git
 
+At the repository dummy folders for flame and flame_api are provided so compiling can be tested beforehand.
+
 ## flame miniconda installer
+
 
 To create a miniconda based flame installer, source directory has to be set at the innosetup script. Look for the directive
 
 "define MySetupDir" and change the path to the path where instaler files are in your machine ("your_path_to/windows_installer/setup_miniconda/")
+This installer installs miniconda3 (the executable is provided) and executes an script to create the flame environment, downloading from Internet all the packages required. 
+Finally, the flame software is installed in the environment and flame is configured. Once Flame has been installed, new runs of the installer 
+can be used to update existing version of the environment or the code.
+This installer only supports 64 bits versions of Windows (due to the miniconda version provided) and requires Internet access.
 
 
 ## flame self-contained installer
