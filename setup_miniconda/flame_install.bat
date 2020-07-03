@@ -46,7 +46,7 @@ if %flame%==false (
 	%userprofile%\miniconda3\Library\bin\conda.bat activate flame
 	pip install  .\flame\ 
 	REM echo y|flame -c config
-	flame -c config
+	flame -c config -a silent
 	)
 
 GOTO :EOF
