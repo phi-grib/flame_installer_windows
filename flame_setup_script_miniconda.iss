@@ -3,7 +3,7 @@
 
 #define MySetupDir "C:\Users\JC\repos\flame_installer_windows\setup_miniconda\"
 #define MyAppName "Flame"
-#define MyAppVersion "0.8"
+#define MyAppVersion "1.0.0-rc1"
 #define MyAppPublisher "PhI laboratory (UPF)"
 #define MyAppURL "http://phi.upf.edu"
 #define MyAppExeName "flame_exec.bat"
