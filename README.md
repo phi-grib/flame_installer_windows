@@ -57,7 +57,7 @@ Now, create a folder call flame_env and run the following command inside of the 
 conda pack -n flame -o flame_env.zip
 ```
 
-When the packing is finished, unzip de file and move the folder containing the environment (flame_env)
+When the packing is finished, unzip the file and move the folder containing the environment (flame_env)
 to the folder `setup_self_contained`
 
 3 - Set the path of installation source files (`your_path_to/windows_installer/setup_self_contained/`) at innosetup script:
