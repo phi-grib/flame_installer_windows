@@ -17,8 +17,8 @@ This installer copies a version of Flame and Flame_API to a local Windows folder
 In order to create a flame installer, both flame and flame_api repositories must be downloaded at the installer folder:
 
 ```bash
-git clone https://github.com/phi-grib/flame.git
-git clone https://github.com/phi-grib/flame_API.git
+git clone https://github.com/phi-grib/flame.git --depth 1
+git clone https://github.com/phi-grib/flame_API.git --depth 1
 ````
 
 Empty folders for flame and flame_api are provided, so compiling can be tested beforehand.
@@ -60,6 +60,9 @@ conda pack -n flame -o flame_env.zip
 When the packing is finished, unzip the file and move the folder containing the environment (flame_env)
 to the folder `setup_self_contained`
 
+IMPORTANT! RDKit is often corrupted in this process, so I recommend replacing the `rdkit` localted at `\flame_installer_windows\setup_self_contained\flame_env\Lib\site-packages`
+with a copy of the local version (usually located at `C:\Users\XXX\miniconda3\envs\flame\Lib\site-packages`)
+
 3 - Set the path of installation source files (`your_path_to/windows_installer/setup_self_contained/`) at innosetup script:
 	
 `define MySetupDir "your_path_to/windows_installer/setup_self_contained/"`
@@ -70,4 +73,5 @@ the paths are not set properly compilation will be aborted and the reason will p
 
 ## Downloading the installer
 An updated version of the Windows installer can be downloaded from the `Output`  directory present in each installer folder.
+
 
