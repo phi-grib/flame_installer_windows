@@ -3,7 +3,7 @@
 
 #define MySetupDir "X:\soft\flame_installer_windows\setup_self_contained\"
 #define MyAppName "Flame"
-#define MyAppVersion "1.0.0-rc2"
+#define MyAppVersion "1.2.2"
 #define MyAppPublisher "PhI laboratory (UPF)"
 #define MyAppURL "http://phi.upf.edu"
 #define MyAppExeName "flame_exec.bat"
@@ -22,7 +22,7 @@ AppUpdatesURL={#MyAppURL}
 DefaultDirName={userdocs}\{#MyAppName}
 DefaultGroupName={#MyAppName}
 LicenseFile={#MySetupDir}\license.txt
-OutputBaseFilename=FlameSetup-100rc1
+OutputBaseFilename=FlameSetup-122
 SetupIconFile={#MySetupDir}\flame.ico
 Compression=lzma
 SolidCompression=yes

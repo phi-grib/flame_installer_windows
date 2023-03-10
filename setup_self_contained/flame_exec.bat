@@ -33,6 +33,5 @@
 ::978f952a14a936cc963da21a135fa983
 @echo off
 @CALL flame_env/Scripts/activate.bat
-START /B python flame_api/manage.py runserver
-timeout /t 8 /nobreak > NUL
-start http://localhost:8000
+START /REALTIME /MIN "flame server" python flame_api/manage.py runserver 0.0.0.0:8000
+START /REALTIME "" "http://localhost:8000"
